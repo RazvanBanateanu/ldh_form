@@ -18,6 +18,11 @@ const Health = () => {
     setName(event.target.value)
   }
 
+  const onSubmit = () =>{
+    const category = 'health'
+    fetch(`http://localhost:3000/api/add-answers?name=${name}&category=${category}&ans1=${ans1}&ans2=${ans2}&ans3=${ans3}`)
+  }
+
 
   return (
     <div className='h-screen'>
@@ -29,7 +34,7 @@ const Health = () => {
       </div>
 
       <div className=' bg-violet-700 bg-opacity-50 h-auto mx-3 rounded-2xl p-1 shadow-2xl mt-24 md:mx-52 md:mt-12 '>
-        <form onSubmit={() => {}} className=' flex flex-col mx-3 my-2 items-center'>
+        <form onSubmit={onSubmit} className=' flex flex-col mx-3 my-2 items-center'>
           <p className='mb-3 text-[1.15rem] text-white'>Cum te simti astazi din punct de vedere mental si fizic? E ceva ce vrei sa evidentiezi?</p>
           <textarea 
             placeholder={"Write here..."} 
