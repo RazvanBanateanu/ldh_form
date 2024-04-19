@@ -20,7 +20,7 @@ const Sport = () => {
 
   const onSubmit = () =>{
     const category = 'sport'
-    fetch(`http://localhost:3000/api/add-answers?name=${name}&category=${category}&ans1=${ans1}&ans2=${ans2}&ans3=${ans3}`)
+    fetch(`https://ldh-form.vercel.app/api/add-answers?name=${name}&category=${category}&ans1=${ans1}&ans2=${ans2}&ans3=${ans3}`)
   }
 
   return (
