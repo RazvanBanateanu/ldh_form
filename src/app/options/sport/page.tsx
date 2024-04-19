@@ -1,5 +1,6 @@
 'use client'
 import React, { ChangeEvent, useState } from 'react'
+import BackOptionsButton from '@/components/BackOptionsButton'
 
 const Sport = () => {
 
@@ -25,6 +26,7 @@ const Sport = () => {
 
   return (
     <div className='h-screen'>
+      <BackOptionsButton />
       <div className=' bg-violet-700 bg-opacity-60 h-auto '>
         <div className=' text-3xl font-bold text-center py-3 text-purple-100'>
           <h1>Welcome to the</h1>
@@ -32,7 +34,7 @@ const Sport = () => {
         </div>
       </div>
 
-      <div className=' bg-violet-700 bg-opacity-50 h-auto mt-24 mx-3 rounded-2xl p-1 shadow-2xl  md:mx-52 md:mt-12 '>
+      <div className=' bg-violet-700 bg-opacity-50 h-auto mt-10 mx-3 rounded-2xl p-1 shadow-2xl  md:mx-52 md:mt-8 '>
         <form onSubmit={onSubmit} className=' flex flex-col mx-3 my-2 items-center'>
           <p className='mb-3 text-[1.15rem] text-white'>Cum a decurs antrenamentul tau azi?</p>
           <textarea 

@@ -1,5 +1,6 @@
 'use client'
 import React, { ChangeEvent, useState } from 'react'
+import BackOptionsButton from '@/components/BackOptionsButton'
 
 const Health = () => {
 
@@ -28,6 +29,7 @@ const Health = () => {
 
   return (
     <div className='h-screen'>
+      <BackOptionsButton />
       <div className=' bg-violet-700 bg-opacity-60 h-auto '>
         <div className=' text-3xl font-bold text-center py-3 text-purple-100'>
           <h1>Welcome to the</h1>
@@ -35,7 +37,7 @@ const Health = () => {
         </div>
       </div>
 
-      <div className=' bg-violet-700 bg-opacity-50 h-auto mx-3 rounded-2xl p-1 shadow-2xl mt-24 md:mx-52 md:mt-12 '>
+      <div className=' bg-violet-700 bg-opacity-50 h-auto mx-3 rounded-2xl p-1 shadow-2xl mt-10 md:mx-52 md:mt-8 '>
         <form onSubmit={onSubmit} className=' flex flex-col mx-3 my-2 items-center'>
           <p className='mb-3 text-[1.15rem] text-white'>Cum te simti astazi din punct de vedere mental si fizic? E ceva ce vrei sa evidentiezi?</p>
           <textarea 
@@ -61,7 +63,7 @@ const Health = () => {
 
           <input
             placeholder='Enter your Full Name'
-            className='w-[30%] mb-3 rounded-2xl p-2 px-4 h-10 bg-purple-400 placeholder-sky-600'
+            className='w-[55%] text-[13px] md:text-base md:w-[30%] mb-3 rounded-2xl p-2 px-4 h-10 bg-purple-400 placeholder-sky-600'
             onChange={handleNameChange}
             required
             />
